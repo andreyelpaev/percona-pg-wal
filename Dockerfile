@@ -14,8 +14,7 @@ RUN microdnf update && \
     make install && \
     make deps && \
     make pg_build && \
-    install main/pg/wal-g /
-
-COPY /wal-g /usr/bin
+    install main/pg/wal-g / && \
+    mv /wal-g /usr/bin
 
 USER 26
