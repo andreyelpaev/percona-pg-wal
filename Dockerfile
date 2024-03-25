@@ -11,6 +11,7 @@ RUN microdnf update && \
     git clone https://github.com/wal-g/wal-g/ wal-g-build && \
     cd wal-g-build && \
     git checkout $WALG_VERSION && \
+    export USE_BROTLI=1 && \
     make install && \
     make deps && \
     make pg_build && \
