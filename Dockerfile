@@ -1,5 +1,7 @@
 FROM perconalab/percona-postgresql-operator:main-ppg16-postgres
 
+LABEL org.opencontainers.image.source="https://github.com/andreyelpaev/percona-pg-wal"
+
 ENV WALG_VERSION=v3.0.0
 
 USER root
